@@ -56,4 +56,7 @@ public class ReservationService {
         return resRepo.findRecentReservations();
     }
 
+    public Reservation addReservation(Reservation reservation){
+        return this.resRepo.save(reservation);
+    }
 }

@@ -32,6 +32,10 @@ public class User {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    public User(String id) {
+        this.id = id;
+    }
+
     // Relations (examples)
     //@OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
     //private List<Property> ownedProperties = new ArrayList<>();

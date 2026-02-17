@@ -31,6 +31,10 @@ public class Property {
 
     private Double occupancyRate;
 
+   public Property(String id){
+        this.id = id;
+    }
+
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reservation> reservations = new ArrayList<>();
 
