@@ -1,7 +1,7 @@
 package com.example.booking_back.controllers;
 
+
 import com.example.booking_back.dtos.ApartmentDTO;
-import com.example.booking_back.dtos.CalendarDayDTO;
 import com.example.booking_back.dtos.PropertyCalendarDTO;
 import com.example.booking_back.services.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
 @CrossOrigin("*")
 public class PropertyController {
     @Autowired
-    private  PropertyService apartmentService;
+    private PropertyService apartmentService;
 
     // 1. Liste des appartements avec stats
     @GetMapping

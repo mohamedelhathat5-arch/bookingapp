@@ -1,5 +1,6 @@
 package com.example.booking_back.services;
 
+
 import com.example.booking_back.dtos.ApartmentDTO;
 import com.example.booking_back.dtos.CalendarDayDTO;
 import com.example.booking_back.dtos.PropertyCalendarDTO;
@@ -76,8 +77,8 @@ public class PropertyService {
                 .name(prop.getName())
                 .revenue(stats != null ? stats.getRevenue() : BigDecimal.ZERO)
                 .nights(stats != null ? stats.getNights() : 0)
-                .averagePrice(stats != null ? BigDecimal.valueOf(((long)(stats.getNights()/daysInMonth)*100 )): BigDecimal.ZERO)
-                .occupancyRate(stats != null ? stats.getOccupancyRate() : 0.0)
+                .averagePrice(stats != null ? stats.getAveragePrice() : BigDecimal.ZERO)
+                .occupancyRate(stats != null ? ((double) stats.getNights() /30)*100: 0.0)
                 .distribution(distribution)
                 .build();
     }
