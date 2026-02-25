@@ -76,7 +76,7 @@ public class PropertyService {
                 .name(prop.getName())
                 .revenue(stats != null ? stats.getRevenue() : BigDecimal.ZERO)
                 .nights(stats != null ? stats.getNights() : 0)
-                .averagePrice(stats != null ? stats.getAveragePrice() : BigDecimal.ZERO)
+                .averagePrice(stats != null ? BigDecimal.valueOf(((long)(stats.getNights()/daysInMonth)*100 )): BigDecimal.ZERO)
                 .occupancyRate(stats != null ? stats.getOccupancyRate() : 0.0)
                 .distribution(distribution)
                 .build();
